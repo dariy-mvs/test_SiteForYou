@@ -552,12 +552,12 @@ ol {
   margin-bottom: 86px;
   margin-right: 5%;
 }
-.why_us_list li:nth-child(3n+3) {
-  margin-right: 0;
-}
-.why_us_list li:nth-child(3n+3) img {
+.why_us_list li img {
   width: 25%;
   margin-bottom: 25px;
+}
+.why_us_list li:nth-child(3n+3) {
+  margin-right: 0;
 }
 .why_us_list .why_us_list_item_span {
   font-family: 'Tahoma Bold', Helvetica, Arial, sans-serif;
@@ -621,7 +621,8 @@ ol {
   margin-top: 22px;
   display: flex;
   align-items: center;
-  padding-left: 28px;
+  justify-content: space-between;
+  padding: 0 26px;
 }
 .our_projects_box .project_button .project_price {
   font-family: 'Tahoma Bold', Helvetica, Arial, sans-serif;
@@ -631,7 +632,6 @@ ol {
   text-transform: uppercase;
   letter-spacing: 0.025em;
   color: #ffffff;
-  margin-right: 63px;
 }
 .our_projects_box .project_button .project_more {
   font-family: 'Tahoma Bold', Helvetica, Arial, sans-serif;
