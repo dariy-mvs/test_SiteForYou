@@ -28,6 +28,20 @@
   font-style: normal;
 }
 
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, em, img, strong, sub, sup, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, time {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
 @max-content-width: 1270px;
 @blue-header-button: #19b5ff;
 @header-futer-background: #213047;
@@ -217,6 +231,7 @@ button:focus {
     padding-top: 30px;
     position: relative;
     z-index: 2;
+    box-sizing: border-box;
 
     button {
       background-color: rgba(255, 157, 42, 0.0);
@@ -225,6 +240,7 @@ button:focus {
       .buttonFont;
       line-height: 61px;
       margin-top: 70px;
+      box-sizing: border-box;
     }
   }
 
@@ -236,11 +252,13 @@ button:focus {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #ffffff;
-    max-width: 510px;
+    max-width: 530px;
+    box-sizing: border-box;
   }
 
   .circle_box {
     margin: 67px 0 0 0;
+    box-sizing: border-box;
   }
 
   svg {
@@ -376,8 +394,8 @@ ol {
   box-sizing: border-box;
 
   .coll_us_descr {
-    max-width: 532px;
-    margin-right: 115px;
+    max-width: 550px;
+    margin-right: 95px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -423,7 +441,7 @@ ol {
     padding-top: 95px;
     background-position: 0 0;
     background-repeat: no-repeat;
-    margin: 10px 105px 0 0;
+    margin: 10px 100px 0 0;
   }
 
   li:last-child {
@@ -475,9 +493,10 @@ ol {
 .measurement_span {
   .articleHeader;
   color: #ffffff;
-  max-width: 435px;
-  display: inline-block;
-  margin-right: 212px;
+  width: 450px;
+  display: block;
+  margin-right: 200px;
+  box-sizing: border-box;
 }
 
 .measurement_button {
@@ -491,7 +510,8 @@ ol {
 
 .why_us {
   width: 100%;
-  background-color: #f8f8f8
+  background-color: #f8f8f8;
+  padding-bottom: 35px;
 }
 
 .why_us_box {
@@ -509,7 +529,6 @@ ol {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 35px;
   box-sizing: border-box;
 
   // Cо стилизацией этого блока тоже возникли вопросы. Теоретически, для того чтобы добиться pixel perfect нужно стилизовать каждую карточку отдельно. Но тогда это сильно осложнит жизнь в мобильной вёрстке и дальнейшем поддержании проекта (не будут же каждый раз менять стили при изменении информации на сайте). На практике чему в данной ситуации лучше отдавать предпочтение: пиксельному соответствию макету или удобству дальнейшей эксплуатации? Или, может, есть какая-то технология, о которой я ещё не знаю?
@@ -536,7 +555,7 @@ ol {
     font-family: @TahomaBold;
     font-size: 16px;
     line-height: 27px;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.025em;
     color: #212121;
@@ -774,4 +793,5 @@ ol {
 .footer_adress_social_list {
   display: flex;
   width: auto;
+  margin-top: 23px;
 }

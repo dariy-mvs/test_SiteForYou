@@ -18,6 +18,66 @@
   font-weight: normal;
   font-style: normal;
 }
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+section,
+time {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 .darkMask {
   content: "";
   position: absolute;
@@ -186,6 +246,7 @@ button:focus {
   padding-top: 30px;
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
 }
 .header .title_box_wrapper button {
   background-color: rgba(255, 157, 42, 0);
@@ -200,6 +261,7 @@ button:focus {
   font-size: 18px;
   line-height: 61px;
   margin-top: 70px;
+  box-sizing: border-box;
 }
 .header .header_title {
   font-family: 'Bebas Neue Regular', Helvetica, Arial, sans-serif;
@@ -209,10 +271,12 @@ button:focus {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #ffffff;
-  max-width: 510px;
+  max-width: 530px;
+  box-sizing: border-box;
 }
 .header .circle_box {
   margin: 67px 0 0 0;
+  box-sizing: border-box;
 }
 .header svg {
   margin-right: 5px;
@@ -334,8 +398,8 @@ ol {
   box-sizing: border-box;
 }
 .coll_us_box .coll_us_descr {
-  max-width: 532px;
-  margin-right: 115px;
+  max-width: 550px;
+  margin-right: 95px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -383,7 +447,7 @@ ol {
   padding-top: 95px;
   background-position: 0 0;
   background-repeat: no-repeat;
-  margin: 10px 105px 0 0;
+  margin: 10px 100px 0 0;
 }
 .coll_us_contacts_list li:last-child {
   margin-right: 0;
@@ -434,9 +498,10 @@ ol {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #ffffff;
-  max-width: 435px;
-  display: inline-block;
-  margin-right: 212px;
+  width: 450px;
+  display: block;
+  margin-right: 200px;
+  box-sizing: border-box;
 }
 .measurement_button {
   background-color: rgba(255, 157, 42, 0);
@@ -455,6 +520,7 @@ ol {
 .why_us {
   width: 100%;
   background-color: #f8f8f8;
+  padding-bottom: 35px;
 }
 .why_us_box {
   max-width: 1270px;
@@ -476,7 +542,6 @@ ol {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 35px;
   box-sizing: border-box;
 }
 .why_us_list li {
@@ -498,7 +563,7 @@ ol {
   font-family: 'Tahoma Bold', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 27px;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.025em;
   color: #212121;
@@ -716,4 +781,5 @@ ol {
 .footer_adress_social_list {
   display: flex;
   width: auto;
+  margin-top: 23px;
 }
