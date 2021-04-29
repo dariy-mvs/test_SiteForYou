@@ -1,0 +1,777 @@
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url('../fonts/BebasNeueRegular/BebasNeueRegular.eot') format('embedded-opentype'),
+    url('../fonts/BebasNeueRegular/BebasNeueRegular.woff') format('woff'),
+    url('../fonts/BebasNeueRegular/BebasNeueRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Tahoma Regular';
+  src: url('../fonts/Tahoma/Regular/Tahoma.eot');
+  src: url('../fonts/Tahoma/Regular/Tahoma.eot') format('embedded-opentype'),
+    url('../fonts/Tahoma/Regular/Tahoma.woff') format('woff'),
+    url('../fonts/Tahoma/Regular/Tahoma.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tahoma Bold';
+  src: url('../fonts/Tahoma/Bold/Tahoma-Bold.eot');
+  src: url('../fonts/Tahoma/Bold/Tahoma-Bold.eot') format('embedded-opentype'),
+    url('../fonts/Tahoma/Bold/Tahoma-Bold.woff') format('woff'),
+    url('../fonts/Tahoma/Bold/Tahoma-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@max-content-width: 1270px;
+@blue-header-button: #19b5ff;
+@header-futer-background: #213047;
+@TahomaBold: 'Tahoma Bold', Helvetica, Arial, sans-serif;
+@TahomaRegular: 'Tahoma Regular', Helvetica, Arial, sans-serif;
+@BebasNeueRegular: 'Bebas Neue Regular', Helvetica, Arial, sans-serif;
+
+.darkMask {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+}
+
+.contentSize {
+  max-width: @max-content-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.articleHeader {
+  font-family: @TahomaBold;
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.buttonFont {
+  width: 240px;
+  height: 68px;
+  text-transform: uppercase;
+  font-family: @TahomaBold;
+  line-height: 15px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+button:active,
+button:focus {
+  border: none;
+  outline: none;
+}
+
+.header {
+  width: 100%;
+  font-family: @TahomaBold;
+  line-height: 15px;
+
+
+  .header_adress_img {
+    width: 220px;
+  }
+
+  .header_adress_box {
+    .contentSize;
+    height: 114px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header_adress {
+    width: auto;
+    display: flex;
+    align-items: center;
+
+    ul {
+      list-style-type: none;
+      margin-right: 60px;
+    }
+
+    li {
+
+      padding-left: 33px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: 23px;
+
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: #212121;
+      }
+    }
+
+    .adress_tel {
+      background-image: url(../img/layer_13_copy_268.png);
+      padding-bottom: 13px;
+      padding-top: 3px;
+    }
+
+    .adress_email {
+      background-image: url(../img/layer_27_266.png);
+      padding-bottom: 3px;
+    }
+
+    button {
+      width: 259px;
+      height: 68px;
+      background-color: @blue-header-button;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+    }
+  }
+
+  .header_nav {
+    width: 100%;
+    background-color: @header-futer-background;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu_list {
+    display: flex;
+    width: @max-content-width;
+    justify-content: start;
+    align-items: center;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    .menu_list_item {
+      margin-right: 48px;
+    }
+
+    .menu_list_item:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+    }
+
+    a:hover {
+      color: @blue-header-button;
+    }
+  }
+
+  .title_box {
+    background-image: url(../img/layer_29_580.png);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .title_box::after {
+    .darkMask;
+    opacity: 0.6;
+    width: 50%;
+  }
+
+  .title_box_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    .contentSize;
+    padding-top: 30px;
+    position: relative;
+    z-index: 2;
+
+    button {
+      background-color: rgba(255, 157, 42, 0.0);
+      border: 2px solid @blue-header-button;
+      color: @blue-header-button;
+      .buttonFont;
+      line-height: 61px;
+      margin-top: 70px;
+    }
+  }
+
+  .header_title {
+    font-family: @BebasNeueRegular;
+    font-size: 54px;
+    line-height: 61px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    max-width: 510px;
+  }
+
+  .circle_box {
+    margin: 67px 0 0 0;
+  }
+
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.about_company_box {
+  width: @max-content-width;
+  margin: 0 auto;
+}
+
+.about_company_description_box {
+  margin: 70px 0 135px 0;
+  display: flex;
+  //изначально добавила сюда justify-content: space-between; для лучшей адаптивности, но тогда это не совсем соответствует макету. Как в таких случаях обычно делается: пишется больше медиазапросов для разных экранов с изменением размеров margin или просто объясняется заказчику, что неполное совпадение текста - это нормально? В реальной разработке насколько подробный даётся макет мобильной версии? 
+}
+
+.about_company_descr_box {
+  width: 591px;
+  margin-right: 60px;
+}
+
+ol {
+  width: 591px;
+}
+
+.about_company {
+  font-family: @TahomaBold;
+  font-size: 36px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #212121;
+  margin-top: 115px;
+}
+
+.about_company_img {
+  background-color: #ff9d2a;
+}
+
+.about_company_descr {
+  font-family: @TahomaRegular;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #212121;
+  margin: 30px 0 25px 0;
+}
+
+.about_company_more {
+  font-family: @TahomaBold;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #212121;
+  text-decoration: none;
+}
+
+.about_company_more::after {
+  content: "";
+  background-image: url(../img/polygon_1_91.png);
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+}
+
+.about_company_more:hover::after {
+  transform: rotate(90deg);
+}
+
+.advantages_list {
+  list-style-type: none;
+  counter-reset: advantages_item;
+
+}
+
+.advantages_list_item::before {
+  content: counter(advantages_item);
+  counter-increment: advantages_item;
+  display: inline-block;
+  margin: 3px 10px 0 0;
+  font-family: @BebasNeueRegular;
+  font-size: 36px;
+  line-height: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: @blue-header-button;
+}
+
+.advantages_list_item {
+  font-family: @TahomaRegular;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: @blue-header-button;
+  display: flex;
+  margin-top: 40px;
+  // в макете отступы между пунктами колеблются от 35 до 60 пикселей. Я могу написать каждому элементу отдельный марджин ради pixel perfect, но не уверена что это имеет смысл. Как вообще правильно делается в таких случаях?
+}
+
+.advantages_list_item:first-child {
+  margin-top: 0;
+}
+
+.coll_us {
+  width: 100%;
+  background-image: url(../img/layer_9_114.png);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #d2d1d1;
+}
+
+.coll_us::after {
+  .darkMask;
+  width: 100%;
+
+}
+
+.coll_us_box {
+  position: relative;
+  z-index: 2;
+  .contentSize;
+  display: flex;
+  align-items: start;
+  min-height: 340px;
+  padding-top: 85px;
+  box-sizing: border-box;
+
+  .coll_us_descr {
+    max-width: 532px;
+    margin-right: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.coll_us_header {
+  .articleHeader;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.coll_us_description {
+  font-family: @TahomaRegular;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #e7e7e7;
+}
+
+.coll_us_span {
+  .coll_us_description;
+  text-transform: uppercase;
+}
+
+.coll_us_contacts_list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+
+  .email {
+    background-image: url(../img/email-icon.png);
+  }
+
+  .tel {
+    background-image: url(../img/phone-icon.png);
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 95px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin: 10px 105px 0 0;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    margin-top: 18px;
+    font-family: @TahomaBold;
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: 700;
+    color: #4bc5ff;
+    text-decoration: none;
+  }
+}
+
+.measurement {
+  width: 100%;
+  background-color: #0088c8;
+  min-height: 340px;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 135px;
+
+}
+
+.measurement_box::before {
+  content: "";
+  height: inherit;
+  background-image: url(../img/pencil.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  opacity: 0.07;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.measurement_box {
+  .contentSize;
+  display: flex;
+  align-items: start;
+}
+
+.measurement_span {
+  .articleHeader;
+  color: #ffffff;
+  max-width: 435px;
+  display: inline-block;
+  margin-right: 212px;
+}
+
+.measurement_button {
+  background-color: rgba(255, 157, 42, 0.0);
+  border: 2px solid #ffffff;
+  .buttonFont;
+  line-height: 61px;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.why_us {
+  width: 100%;
+  background-color: #f8f8f8
+}
+
+.why_us_box {
+  .contentSize;
+}
+
+.why_us_header {
+  .articleHeader;
+  color: #212121;
+  padding-top: 98px;
+  margin-bottom: 132px;
+}
+
+.why_us_list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+
+  // Cо стилизацией этого блока тоже возникли вопросы. Теоретически, для того чтобы добиться pixel perfect нужно стилизовать каждую карточку отдельно. Но тогда это сильно осложнит жизнь в мобильной вёрстке и дальнейшем поддержании проекта (не будут же каждый раз менять стили при изменении информации на сайте). На практике чему в данной ситуации лучше отдавать предпочтение: пиксельному соответствию макету или удобству дальнейшей эксплуатации? Или, может, есть какая-то технология, о которой я ещё не знаю?
+  li {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 86px;
+    margin-right: 5%;
+  }
+
+  li:nth-child(3n+3) {
+    margin-right: 0;
+
+    img {
+      width: 25%;
+      margin-bottom: 25px;
+    }
+  }
+
+  .why_us_list_item_span {
+
+    font-family: @TahomaBold;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #212121;
+    text-align: center;
+    max-width: 335px;
+  }
+}
+
+.our_projects_box {
+  .contentSize;
+  display: flex;
+  flex-wrap: wrap;
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    width: 396px;
+    margin-right: 40px;
+    margin-bottom: 87px;
+  }
+
+  .project:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+
+  img {
+    margin-bottom: 23px;
+  }
+
+  .project_header {
+    font-family: @TahomaBold;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #212121;
+    margin-bottom: 5px;
+  }
+
+  .project_description {
+    font-family: @TahomaRegular;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #212121;
+  }
+
+  .project:nth-child(3n + 1) {
+
+    .project_header,
+    .project_description {
+      margin-left: 25px;
+    }
+  }
+
+  .project_button {
+    width: 100%;
+    height: 65px;
+    box-sizing: border-box;
+    background-color: @blue-header-button;
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+
+    .project_price {
+      font-family: @TahomaBold;
+      font-size: 16px;
+      line-height: 27px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      color: #ffffff;
+      margin-right: 63px;
+    }
+
+    .project_more {
+      font-family: @TahomaBold;
+      font-size: 14px;
+      line-height: 15px;
+      font-weight: 700;
+      text-decoration: underline;
+      color: #ffffff;
+      margin-top: 3px;
+    }
+
+    .project_more::after {
+      content: "";
+      background-image: url(../img/project-arrow.png);
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .project_more:hover::after {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.our_projects_header {
+  .contentSize;
+  .articleHeader;
+  color: #212121;
+  margin-top: 98px;
+  margin-bottom: 55px;
+  box-sizing: border-box;
+}
+
+.projects_button {
+  .buttonFont;
+  background-color: rgba(255, 157, 42, 0.0);
+  border: 2px solid @blue-header-button;
+  color: @blue-header-button;
+  margin: 5px auto 142px auto;
+  display: block;
+}
+
+.footer {
+  background-color: #213047;
+  width: 100%;
+  padding-top: 63px;
+
+  ul {
+    list-style-type: none;
+
+    a,
+    span {
+      font-family: @TahomaRegular;
+      line-height: 27px;
+      font-weight: 400;
+      text-transform: none;
+      color: #d3d3d3;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer_box {
+  padding-bottom: 173px;
+  .contentSize;
+  display: flex;
+  justify-content: start;
+}
+
+.logo_group,
+.footer_menu_box,
+.footer_adress {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-right: 174px;
+}
+
+.footer_menu_box {
+  margin-right: 180px;
+}
+
+.footer_adress {
+  margin-right: 98px;
+}
+
+.footer_logo {
+  margin-bottom: 128px;
+}
+
+.footer_section_header {
+  font-family: @TahomaBold;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.footer_section_header:nth-child(1) {
+  margin-bottom: 18px;
+}
+
+.email_adress {
+  margin: 29px 0;
+}
+
+.link-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.social_adress_link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.link_vk {
+  background-image: url(../img/logo-vk.png);
+  background-size: 27px;
+}
+
+.link_instagram {
+  background-image: url(../img/logo-instagram.png);
+  background-size: 29px;
+}
+
+.link_fb {
+  background-image: url(../img/logo-facebook.png);
+  background-size: 16px;
+}
+
+.social_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #374458;
+  margin-right: 10px;
+}
+
+.social_item:last-child {
+  margin-right: 0;
+}
+
+.footer_adress_social_list {
+  display: flex;
+  width: auto;
+}
